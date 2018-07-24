@@ -127,7 +127,7 @@
 
                     <div id="content-contact" class="content-pane inactive">
                         <p style="text-align: justify">
-                            Joyful Acres, LLC. is the official-sounding name for Katie Kovach's adventures in sustainable farming, environmental education, and craft business.
+                            Joyful Acres, LLC. is the official-sounding name for Katie Kovach's adventures in sustainable forest farming, environmental education, and craft business.
                         </p>
                         <br />
                         <p>
@@ -152,7 +152,7 @@
             <div class="container">
                 <div class="tabs is-centered">
                     <ul>
-                        <li><a>And this is the bottom</a></li>
+                        <li class="is-size-7">Content Copyright 2018 Joyful Arces, LLC.</li>
                     </ul>
                 </div>
             </div>
@@ -187,7 +187,7 @@
           const $contentPanes = Array.prototype.slice.call(document.querySelectorAll('.content-pane'), 0);
           const $imagePanes = Array.prototype.slice.call(document.querySelectorAll('.image-pane'), 0);
 
-          // Check if there are any navbar burgers
+          // Check if there are any nav links
           if ($navLinks.length > 0) {
 
             // Add a click event on each of them
@@ -199,7 +199,6 @@
                 const $target = document.getElementById('content-' + target);
                 const $targetImage = document.getElementById('image-' + target);
 
-                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
                 $navLinks.forEach( el => { el.parentElement.classList.remove('is-active')});
                 el.parentElement.classList.add('is-active');
 
@@ -215,16 +214,7 @@
 
 
         });
-
-
-        var links = document.getElementsByClassName("example");
-        for (var i = 0; i < links.length; i++) {
-            links[i].addEventListener('click', function(evt) {
-                console.log('Clicked ', evt)
-            });
-        }
     </script>
-    <script src=""
 </body>
 
 </html>
