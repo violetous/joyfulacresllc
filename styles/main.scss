@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Gaegu');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+//$family-primary:'Indie Flower';
+$family-primary:'Gaegu';
+$link: #6699a5;
+
+.inactive {
+	display: none;
+};
+
+p {
+ 	font-family: Abel;
+ 	text-align: justify;
+}
+
+figure {
+	border: 1px solid #aaaaaa;
+	border-radius: 10px;
+}
+
+figure img {
+	border-radius: 9px;	
+}
+
+@import '../lib/bulma/bulma.sass';
+
