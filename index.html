@@ -216,7 +216,6 @@
                 const target = el.dataset.target;
                 const $target = document.getElementById('content-' + target);
                 const $targetImage = document.getElementById('image-' + target);
-
                 $navLinks.forEach( el => { el.parentElement.classList.remove('is-active')});
                 el.parentElement.classList.add('is-active');
 
@@ -225,6 +224,12 @@
 
                 $imagePanes.forEach( el => { el.classList.add('inactive')});
                 $targetImage.classList.remove('inactive');
+
+                ga('send', {
+                  hitType: 'event',
+                  eventCategory: 'link',
+                  eventAction: target,
+                });
 
               });
             });
