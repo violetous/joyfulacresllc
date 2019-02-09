@@ -3,7 +3,10 @@
 @import url("https://fonts.googleapis.com/css?family=Gaegu");
 @import url("https://fonts.googleapis.com/css?family=Abel");
 .inactive {
-  display: none; }
+  display: none !important; }
+
+.latin-name {
+  font-style: italic; }
 
 p {
   font-family: Abel;
@@ -6357,5 +6360,3 @@ label.panel-block {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
-
-/*# sourceMappingURL=main.css.map */

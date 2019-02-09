@@ -7,8 +7,12 @@ $family-primary:'Gaegu';
 $link: #6699a5;
 
 .inactive {
-	display: none;
+	display: none !important;
 };
+
+.latin-name {
+	font-style: italic;
+}
 
 p {
  	font-family: Abel;
