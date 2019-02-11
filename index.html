@@ -44,7 +44,7 @@
                                     <li><a class="nav-link" data-target="home">Home</a></li>
                                     <li><a class="nav-link" data-target="plants">Plants</a></li>
                                     <li><a class="nav-link" data-target="playscapes">Playscapes</a></li>
-                                    <li class="is-active"><a class="nav-link" data-target="order">Shop</a></li>
+                                    <li><a class="nav-link" data-target="shop">Shop</a></li>
                                     <li><a class="nav-link" data-target="contact">Contact</a></li>
                                 </ul>
                             </div>
@@ -53,251 +53,348 @@
                 </div>
             </nav>
         </div>
-        <div class="hero-body">
+        <div class="hero-body" >
             <div class="container has-text-centered">
-                <div class="columns is-vcentered">
-                    <div id="order-form" class="column is-12">
-                        <div id="order-form-page1" class="inactive">
-                            <h1 class="title is-1">Online Order Form</h1>
-                            <table class="table is-fullwidth is-striped is-hoverable">
-                                <thead>
-                                    <th>Name</th>
-                                    <th class="is-hidden-touch" style="white-space: nowrap;">Latin Name</th>
-                                    <th>Size</th>
-                                    <th>Price</th>
-                                    <th>Available</th>
-                                    <th class="is-hidden-touch">Growth</th>
-                                    <th class="is-hidden-touch">Uses</th>
-                                    <th>Qty</th>
-                                    <th>Total</th>
-                                </thead>
+                <div class="is-vcentered">
 
-                                <tfoot>
-                                </tfoot>
+                    <div id="page-shop" class="page columns inactive">
+                        <div class="column is-12">
 
-                                <tbody id="catalog">
-                                    <template id="product-row">
-                                        <tr>
-                                            <td></td>
-                                            <td class='latin-name is-hidden-touch'></td>
-                                            <td>
-                                                <div class="select is-small">
-                                                <select></select>
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td class="is-hidden-touch"></td>
-                                            <td class="is-hidden-touch"></td>
-                                            <td>
-                                                <input class="input" type="number" name="qty" min="0" max="100" style="width: 3rem;">
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                    </template>
-                                </tbody>
-                            </table>
-                            <div id="order-total" class="is-size-4 has-text-weight-bold has-text-right">Order Total: $0.00</div>
-                        </div>
+                            <!-- PAGE 1 : Products -->
+                            <div id="catalog-page1" class="catalog-page inactive">
+                                <h1 class="title is-1">Online Pre-order Form</h1>
+                                <table class="table is-fullwidth is-striped is-hoverable">
+                                    <thead>
+                                        <th>Name</th>
+                                        <th class="is-hidden-touch" style="white-space: nowrap;">Latin Name</th>
+                                        <th class="is-hidden-touch">Growth</th>
+                                        <th class="is-hidden-touch">Uses</th>
+                                        <th>Size</th>
+                                        <th>Price</th>
+                                        <th>Available</th>
+                                        <th>Qty</th>
+                                        <th style="width: 5em;">Total</th>
+                                    </thead>
 
-                        <div id="order-form-page2" class="">
-                            
-                            <div class="field is-horizontal">
-                              <div class="field-label is-normal">
-                                &nbsp;
-                              </div>
-                              <div class="field-body">
-                                <div class="is-size-3 has-text-left"> Customer Information</div>
-                              </div>
-                            </div>
-                            <div class="field is-horizontal">
-                              <div class="field-label is-normal">
-                                <label class="label">Name</label>
-                              </div>
-                              <div class="field-body">
-                                <div class="field">
-                                  <p class="control is-expanded has-icons-left">
-                                    <input class="input" type="text" placeholder="First">
-                                    <span class="icon is-small is-left">
-                                      <i class="fas fa-user"></i>
-                                    </span>
-                                  </p>
+                                    <tfoot>
+                                    </tfoot>
+
+                                    <tbody id="catalog-table">
+                                        <template class="product-row">
+                                            <tr>
+                                                <td></td> <!--Name-->
+                                                <td class='latin-name is-hidden-touch'></td><!--Latin Name-->
+                                                <td class="is-hidden-touch"></td><!--Growth-->
+                                                <td class="is-hidden-touch"></td><!--Uses-->
+                                                <td>
+                                                    <div class="select is-small">
+                                                    <select></select> <!--Size-->
+                                                    </div>
+                                                </td>
+                                                <td></td><!--Price-->
+                                                <td style="white-space: nowrap;"></td><!--Available-->
+                                                <td>
+                                                    <input class="input" type="number" name="qty" min="0" max="100" style="width: 3rem;"><!--Qty-->
+                                                </td>
+                                                <td></td><!--Total-->
+                                            </tr>
+                                        </template>
+                                    </tbody>
+                                </table>
+                                <div id="catalog-total" class="is-size-4 has-text-weight-bold has-text-right has-">Order Total: $0.00
                                 </div>
-                                <div class="field">
-                                  <p class="control is-expanded has-icons-left">
-                                    <input class="input" type="text" placeholder="Last">
-                                    <span class="icon is-small is-left">
-                                      <i class="fas fa-user"></i>
-                                    </span>
-                                  </p>
+                                <p class="has-text-right is-family-secondary is-size-6">
+                                    *Order total includes North Carolina Sales Tax
+                                </p>
+                                <div class="has-text-right">
+                                    <button class="button is-success" id="btn-catalog-page1-next" disabled> Next &gt; </button>
                                 </div>
-                              </div>
                             </div>
 
-                            <div class="field is-horizontal">
-                              <div class="field-label is-normal">
-                                <label class="label">Email</label>
-                              </div>
-                              <div class="field-body">
-                                <div class="field">
-                                  <p class="control is-expanded has-icons-left has-icons-right">
-                                    <input class="input is-success" type="email" placeholder="Email" value="">
-                                    <span class="icon is-small is-left">
-                                      <i class="fas fa-envelope"></i>
-                                    </span>
-                                    <span class="icon is-small is-right">
-                                      <i class="fas fa-check"></i>
-                                    </span>
-                                  </p>
+
+                            <!-- PAGE 2 : Personal information -->
+                            <div id="catalog-page2" class="catalog-page inactive">
+                                
+                                <div class="field is-horizontal">
+                                  <div class="field-label is-normal">
+                                    &nbsp;
+                                  </div>
+                                  <div class="field-body">
+                                    <div class="is-size-3 has-text-left"> Customer Information</div>
+                                  </div>
                                 </div>
-                              </div>
+                                <div class="field is-horizontal">
+                                  <div class="field-label is-normal">
+                                    <label class="label">Name</label>
+                                  </div>
+                                  <div class="field-body">
+                                    <div class="field">
+                                      <p class="control is-expanded has-icons-left">
+                                        <input id="field-firstname" class="input" type="text" placeholder="First">
+                                        <span class="icon is-small is-left">
+                                          <i class="fas fa-user"></i>
+                                        </span>
+                                      </p>
+                                    </div>
+                                    <div class="field">
+                                      <p class="control is-expanded has-icons-left">
+                                        <input id="field-lastname" class="input" type="text" placeholder="Last">
+                                        <span class="icon is-small is-left">
+                                          <i class="fas fa-user"></i>
+                                        </span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                  <div class="field-label is-normal">
+                                    <label class="label">Email</label>
+                                  </div>
+                                  <div class="field-body">
+                                    <div class="field">
+                                      <p class="control is-expanded has-icons-left has-icons-right">
+                                        <input id="field-email" class="input" type="email" placeholder="Email" value="">
+                                        <span class="icon is-small is-left">
+                                          <i class="fas fa-envelope"></i>
+                                        </span>
+                                        <span class="icon is-small is-right">
+                                          <i class="fas fa-check"></i>
+                                        </span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                  <div class="field-label is-normal">
+                                    <label class="label">
+                                        Phone Number
+                                    </label>
+                                    </div>
+                                    <div class="field-body">
+                                    <div class="field is-expanded">
+                                      <div class="field">
+                                        <p class="control is-expanded has-icons-left">
+                                          <input id="field-phone" class="input" type="tel" placeholder="Your phone number">
+                                        <span class="icon is-small is-left">
+                                          <i class="fas fa-phone"></i>
+                                        </span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                  <div class="field-label is-normal">
+                                    <label class="label">Address</label>
+                                  </div>
+                                  <div class="field-body">
+                                    <div class="field">
+                                      <p class="control is-expanded">
+                                        <input id="field-address" class="input" type="text" placeholder="Street Address">
+                                      </p>
+                                    </div>
+                                    <div class="field">
+                                      <p class="control is-expanded">
+                                        <input id="field-city" class="input" type="text" placeholder="City">
+                                      </p>
+                                    </div>
+                                    <div class="field is-narrow">
+                                      <div class="control">
+                                        <div class="select is-fullwidth">
+                                          <select id="field-state">
+                                            <option>NC</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="field">
+                                      <p class="control is-expanded">
+                                        <input id="field-zip" class="input" type="text" placeholder="Zip">
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                  <div class="field-label is-normal">
+                                    <label class="label">Preferred Payment</label>
+                                  </div>
+                                  <div class="field-body">
+                                    <div class="field is-expanded">
+                                      <div class="control is-expanded">
+                                        <div class="select is-fullwidth">
+                                          <select id="field-payment">
+                                            <option>Cash/Check</option>
+                                            <option>Credit/Debit Card</option>
+                                            <option>Paypal</option>
+                                            <option>Venmo</option>
+                                            <option>Apple Pay</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <p class="help">
+                                        Payment is due when you recieve your order.  This form is for reserving plants only.  You will not be prompted to enter payment information here.  
+                                      </p>
+
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                  <div class="field-label is-normal">
+                                    <label class="label">Comments/Special Instructions</label>
+                                  </div>
+                                  <div class="field-body">
+                                    <div class="field">
+                                      <div class="control">
+                                        <textarea id="field-comments" class="textarea" placeholder="Explain how we can help!"></textarea>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                  <div class="field-label">
+                                    <!-- Left empty for spacing -->
+                                  </div>
+                                  <div class="field-body">
+                                    <div class="field">
+                                      <div class="control is-expanded has-text-right">
+                                        <button id="btn-catalog-page2-next" class="button is-success">
+                                          Next &gt;
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                             </div>
 
-                            <div class="field is-horizontal">
-                              <div class="field-label is-normal">
-                                <label class="label">
-                                    Phone Number
-                                </label>
-                                </div>
-                                <div class="field-body">
-                                <div class="field is-expanded">
-                                  <div class="field">
-                                    <p class="control is-expanded has-icons-left">
-                                      <input class="input" type="tel" placeholder="Your phone number">
-                                    <span class="icon is-small is-left">
-                                      <i class="fas fa-phone"></i>
-                                    </span>
+
+                            <!-- PAGE 3 : Summary -->
+                            <div id="catalog-page3" class="catalog-page inactive">
+                                <h1 class="title is-1">Pre-order Summary</h1>
+                                <table class="table is-fullwidth is-striped is-hoverable">
+                                    <thead>
+                                        <th class="is-hidden-touch" style="white-space: nowrap;">Name</th>
+                                        <th>Size</th>
+                                        <th>Available</th>
+                                        <th>Unit Price</th>
+                                        <th>Qty</th>
+                                        <th style="width: 5em;">Total</th>
+                                    </thead>
+
+                                    <tfoot>
+                                    </tfoot>
+
+                                    <tbody id="order-summary-table">
+                                        <template class="product-row">
+                                            <tr>
+                                                <td></td> <!-- Name -->
+                                                <td></td> <!-- Size -->
+                                                <td></td> <!-- Available -->
+                                                <td></td> <!-- Unit Price -->
+                                                <td></td> <!-- Qty -->
+                                                <td></td> <!-- Total -->
+                                            </tr>
+                                        </template>
+                                    </tbody>
+                                </table>
+                                <div class="content">
+                                    <p class="has-text-right">
+                                        <span id="summary-customer-name">Joe Customer</span>
+                                        <br />
+                                        <a id="summary-customer-email" href="mailto:joe@customer.com">Joe@Customer.com</a>
+                                        <br />
+                                        <span id="summary-customer-phone">919-423-3401</span>
+                                        <br />
+                                        <span id="summary-customer-address">123 Southview Road</span>
+                                        <br/>
+                                        <span id="summary-customer-citystatezip">Durham, NC 27019</span>
+                                        <br /><br />
+                                        <span class="has-text-weight-bold">Payment Preference</span><br />
+                                        <span id="summary-customer-payment">Venmo</span>
                                     </p>
-                                  </div>
+
                                 </div>
-                              </div>
+                                <div id="order-summary-total" class="is-size-4 has-text-weight-bold has-text-right">Order Total: $0.00
+                                </div>
+                                <p class="has-text-right is-family-secondary is-size-6">
+                                    *Order total includes North Carolina Sales Tax
+                                </p>
+                                <div class="has-text-right">
+                                    <a class="button is-success" id="btn-catalog-submit"> Submit Pre-order &gt; </a>
+                                </div>
                             </div>
 
-                            <div class="field is-horizontal">
-                              <div class="field-label is-normal">
-                                <label class="label">Address</label>
-                              </div>
-                              <div class="field-body">
-                                <div class="field">
-                                  <p class="control is-expanded">
-                                    <input class="input" type="text" placeholder="Street Address">
-                                  </p>
-                                </div>
-                                <div class="field">
-                                  <p class="control is-expanded">
-                                    <input class="input" type="text" placeholder="City">
-                                  </p>
-                                </div>
-                                <div class="field is-narrow">
-                                  <div class="control">
-                                    <div class="select is-fullwidth">
-                                      <select>
-                                        <option>NC</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="field">
-                                  <p class="control is-expanded">
-                                    <input class="input" type="text" placeholder="Zip">
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
 
-                            <div class="field is-horizontal">
-                              <div class="field-label is-normal">
-                                <label class="label">Preferred Payment</label>
-                              </div>
-                              <div class="field-body">
-                                <div class="field is-expanded">
-                                  <div class="control is-expanded">
-                                    <div class="select is-fullwidth">
-                                      <select>
-                                        <option>Cash/Check</option>
-                                        <option>Credit/Debit Card</option>
-                                        <option>Paypal</option>
-                                        <option>Venmo</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <p class="help">
-                                    Payment is due when you recieve your order.  This form is for reserving plants only.  You will not be prompted to enter payment information here.  
-                                  </p>
-
-                                </div>
-                              </div>
-                            </div>
-                            <div class="field is-horizontal">
-                              <div class="field-label is-normal">
-                                <label class="label">Comments/Special Instructions</label>
-                              </div>
-                              <div class="field-body">
-                                <div class="field">
-                                  <div class="control">
-                                    <textarea class="textarea" placeholder="Explain how we can help!"></textarea>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="field is-horizontal">
-                              <div class="field-label">
-                                <!-- Left empty for spacing -->
-                              </div>
-                              <div class="field-body">
-                                <div class="field">
-                                  <div class="control">
-                                    <button class="button">
-                                      Next &gt;
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div id="order-form-page3" class="">
-
-                        </div>
+                            <!-- PAGE 3 : Submit! -->
+                            <div id="catalog-page4" class="catalog-page has-text-centered inactive">
+                                <img src="images/logo.png" style="width: 50px;">
+                                <h2 class="is-size-2 is-bold">Thank You!</h2>
+                                <p class="has-text-centered">Your plants have been reserved.</p>
+                            </div> 
+                        </div>  
                     </div>
                     
-                    <div class="column is-6">
-                        <div id="image-home" class="image-pane inactive">
-                        <figure class="image is-4by3">
-                            <img src="images/photos/anise-hyssop.jpg" alt="Anise Hyssop">
-                        </figure>
+                    <div id="page-home" class="page columns inactive">
+                        <div class="column is-6">
+                                <figure class="image is-4by3">
+                                    <img src="images/photos/anise-hyssop.jpg" alt="Anise Hyssop">
+                                </figure>
                         </div>
+                        <div class="column is-5 is-offset-1 is-flex">
+                            <div id="content-home" class="has-text-centered">
+                                <img src="images/logo.png" style="width: 50px;">
+                                <h1 class="title is-2">
+                                    Joyful Acres
+                                </h1>
+                                <p>
+                                    Joyful Acres is a forest farm and workshop run by Katie Kovach.  Katie sells plants and makes natural products that nourish and inspire.  She also designs natural playscapes for children that challenge and enrich them by cultivating their connection to the natural world.  Joyful Acres is based in Durham, North Carolina.
+                                </p>
+                                <br>
+                                <p class="has-text-centered">
+                                    <a href="http://www.instagram.com/joyfulacresnc">
+                                        <span class="icon" style="margin-right: 20px;">
+                                            <i class="fab fa-instagram fa-2x"></i>
+                                        </span>
+                                    </a>
+                                    <a href="mailto:joyfulacresnc@gmail.com">
+                                        <span class="icon" style="margin-right: 20px;">
+                                            <i class="fa fa-envelope fa-2x"></i>
+                                        </span>
+                                    </a>
+                                    <a href="https://www.facebook.com/joyfulacresnc/">
+                                        <span class="icon">
+                                            <i class="fab fa-facebook fa-2x"></i>
+                                        </span>
+                                    </a>
 
-                        <div id="image-plants" class="image-pane inactive">
-                        <figure class="image is-4by3">
-                            <img src="images/photos/plant.jpg" alt="Comfrey">
-                        </figure>
+
+                                </p>
+                            </div>
                         </div>
-
-                        <div id="image-playscapes" class="image-pane inactive">
-                        <figure class="image is-4by3">
-                            <img src="images/photos/playscape.jpg" alt="Natural Playhouse">
-                        </figure>
-                        </div>
-
-                        <div id="image-contact" class="image-pane inactive">
-                        <figure class="image is-4by3">
-                            <img src="images/photos/katie.jpg" alt="Katie and the Mandala Garden">
-                        </figure>
-                        </div>
-
-
                     </div>
-                    <div class="column is-5 is-offset-1">
-                        
-                        <div id="content-home" class="content-pane inactive">
-                            <img src="images/logo.png" style="width: 50px;">
-                            <h1 class="title is-1">
-                                Joyful Acres
-                            </h1>
+
+                    <div id="page-contact" class="page columns inactive">
+                        <div class="column is-6">
+                            <figure class="image is-4by3">
+                                <img src="images/photos/katie.jpg" alt="Katie and the Mandala Garden">
+                            </figure>
+                        </div>
+
+                        <div class="column is-5 is-offset-1">
+                            <p style="text-align: justify">
+                                Joyful Acres is the official-sounding name for Katie Kovach's adventures in sustainable forest farming, environmental education, and craft business.
+                            </p>
+                            <br />
                             <p>
-                                Joyful Acres is a forest farm and workshop run by Katie Kovach.  Katie sells plants and makes natural products that nourish and inspire.  She also designs natural playscapes for children that challenge and enrich them by cultivating their connection to the natural world.  Joyful Acres is based in Durham, North Carolina.
+                                The best way to get in touch with Katie is via <a href="mailto:joyfulacresnc@gmail.com">E-Mail.</a> 
+                            </p>
+                            <br />
+                            <p>
+                                You can also reach out on social media, such as <a href="http://instagram.com/joyfulacresnc/">Instagram</a>
                             </p>
                             <br>
                             <p class="has-text-centered">
@@ -313,8 +410,34 @@
                                 </a>
                             </p>
                         </div>
+                        </div>
+                    </div>
 
-                    <div id="content-plants" class="content-pane inactive">
+                    <div id="page-playscapes" class="page columns inactive">
+                        <div class="column is-6">
+                            <figure class="image is-4by3">
+                                <img src="images/photos/playscape.jpg" alt="Natural Playhouse">
+                            </figure>
+                        </div>
+                        <div class="column is-5 is-offset-1">
+                            <div class="is-4 is-size-4">
+                                The world is not given by our fathers but borrowed from our children.
+                            </div>
+                            <div>-Wendell Berry</div>
+                            <br />
+                            <p>
+                            Whether you're in the urban jungle or a natural one, if children are using an outdoor space there is always value in landscaping it to facilitate play.  Joyful Acres is founded on the idea that "re-wilding" children's outdoor play spaces results in practical, emotional and spiritual value for both children and their families.  Joyful Acres provides all levels of landscape design services from simple brainstorming sessions to full blown design and management consultation.  <a href="mailto:joyfulacresllc@gmail.com">Contact us</a> if you're planning a project, or are just interested in natural playscapes!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="page-plants" class="page columns inactive">
+                        <div class="column is-6">
+                            <figure class="image is-4by3">
+                                <img src="images/photos/plant.jpg" alt="Comfrey">
+                            </figure>
+                        </div>
+                        <div class="column is-5 is-offset-1">
                             <div class="is-4 is-size-4">
                                 What is a weed?  A plant whose virtues have never been discovered.
                             </div>
@@ -323,51 +446,11 @@
                         <p>
                             Joyful Acres is a 14-acre forest and working nursery.  Katie raises a growing number of native plants that have culinary, medicinal and spiritual value, and plants are available for sale periodically to the general public.  Please watch our social media for seasonal plant specials, and <a href="mailto:joyfulacresllc@gmail.com">contact us</a> if you are interested in any specific plant purchases.
                         </p>
-			<p style="text-align: center; margin-top: 1rem">
-			You can also check out the <a href="pdf/JoyfulAcres2018_19WinterCatalog.pdf">2018-19 Winter Catalog!</a>
-			</p>
+                          <p style="text-align: center; margin-top: 1rem">
+                          You can also check out the <a href="pdf/JoyfulAcres2018_19WinterCatalog.pdf">2018-19 Winter Catalog!</a>
+                          </p>
+                        </div>
                     </div>
-
-                    <div id="content-playscapes" class="content-pane inactive">
-                            <div class="is-4 is-size-4">
-                                The world is not given by our fathers but borrowed from our children.
-                            </div>
-                            <div>-Wendell Berry</div>
-                            <br />
-                        <p>
-                            Whether you're in the urban jungle or a natural one, if children are using an outdoor space there is always value in landscaping it to facilitate play.  Joyful Acres is founded on the idea that "re-wilding" children's outdoor play spaces results in practical, emotional and spiritual value for both children and their families.  Joyful Acres provides all levels of landscape design services from simple brainstorming sessions to full blown design and management consultation.  <a href="mailto:joyfulacresllc@gmail.com">Contact us</a> if you're planning a project, or are just interested in natural playscapes!
-                        </p>
-                    </div>
-
-                    <div id="content-contact" class="content-pane inactive">
-                        <p style="text-align: justify">
-                            Joyful Acres is the official-sounding name for Katie Kovach's adventures in sustainable forest farming, environmental education, and craft business.
-                        </p>
-                        <br />
-                        <p>
-                            The best way to get in touch with Katie is via <a href="mailto:joyfulacresnc@gmail.com">E-Mail.</a> 
-                        </p>
-                        <br />
-                        <p>
-                            You can also reach out on social media, such as <a href="http://instagram.com/joyfulacresnc/">Instagram</a>
-                        </p>
-                            <br>
-                            <p class="has-text-centered">
-                                <a href="http://www.instagram.com/joyfulacresnc">
-                                    <span class="icon" style="margin-right: 20px;">
-                                        <i class="fab fa-instagram fa-2x"></i>
-                                    </span>
-                                </a>
-                                <a href="mailto:joyfulacresnc@gmail.com">
-                                    <span class="icon">
-                                        <i class="fa fa-envelope fa-2x"></i>
-                                    </span>
-                                </a>
-                            </p>
-                    </div>
-                    </div>
-
-
                 </div>
             </div>
         </div>
@@ -382,93 +465,14 @@
             </div>
         </div>
     </section>
+    <script type="text/javascript" src="data/catalog.js"></script>
     <script type="text/javascript" src="js/catalog.js"></script>
+    <script type="text/javascript" src="js/pages.js"></script>
     <script type="text/javascript">
-
         document.addEventListener('DOMContentLoaded', () => {
-          // Get all "navbar-burger" elements
-          const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-          // Check if there are any navbar burgers
-          if ($navbarBurgers.length > 0) {
-
-            // Add a click event on each of them
-            $navbarBurgers.forEach( el => {
-              el.addEventListener('click', () => {
-
-                // Get the target from the "data-target" attribute
-                const target = el.dataset.target;
-                const $target = document.getElementById(target);
-
-                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
-
-              });
-            });
-          }
-
-          const $navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link'), 0);
-          const $contentPanes = Array.prototype.slice.call(document.querySelectorAll('.content-pane'), 0);
-          const $imagePanes = Array.prototype.slice.call(document.querySelectorAll('.image-pane'), 0);
-          const $orderForm = document.getElementById('order-form');
-          
-          currentOrderPage = 1;
-
-
-          // Check if there are any nav links
-          if ($navLinks.length > 0) {
-
-            // Add a click event on each of them
-            $navLinks.forEach( el => {
-              el.addEventListener('click', () => {
-                console.log('Click: ' + el.dataset.target)
-
-                // Get the target from the "data-target" attribute
-                const target = el.dataset.target;
-
-                const $target = document.getElementById('content-' + target);
-                const $targetImage = document.getElementById('image-' + target);
-                $navLinks.forEach( el => { el.parentElement.classList.remove('is-active')});
-                el.parentElement.classList.add('is-active');
-
-                $contentPanes.forEach( el => { el.classList.add('inactive')});
-                $imagePanes.forEach( el => { el.classList.add('inactive')});
-
-                const $columns = Array.prototype.slice.call(document.querySelectorAll('.column'), 0);
-                if(target == 'order') {
-                    $columns.forEach(column => {
-                        column.classList.add('inactive');
-                    })
-                    $orderForm.classList.remove('inactive');
-                } else {
-                    $columns.forEach(column => {
-                        column.classList.remove('inactive');
-                    })
-                    $orderForm.classList.add('inactive');
-                    $target.classList.remove('inactive');
-                    $targetImage.classList.remove('inactive');
-                }
-
-                ga('send', {
-                  hitType: 'event',
-                  eventCategory: 'link',
-                  eventAction: target,
-                });
-
-              });
-            });
-          }
-          var tbody = document.getElementById('catalog');
-
-          catalog.products.forEach(product => {
-            product.addToTable(tbody);
-          });
-
-          catalog.addEventListener('change', evt => {
-            document.getElementById('order-total').textContent = 'Order Total: $' + catalog.getTotalPrice().toFixed(2);
-          });
-
+          setupPages();
+          showPage('home');
+          setupCatalog();
         });
     </script>
 </body>

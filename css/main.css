@@ -6360,3 +6360,8 @@ label.panel-block {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
+
+.is-vertical-center {
+  display: flex;
+  align-items: center;
+}
