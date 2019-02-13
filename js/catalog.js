@@ -17,6 +17,7 @@ const CUSTOMER_FIELDS = [
 	'state',
 	'zip',
 	'payment',
+	'delivery',
 	'comments'
 ]
 
@@ -36,6 +37,7 @@ const CUSTOMER_FIELD_VALIDATORS = {
 	state : notEmptyString,
 	zip : notEmptyString,
 	payment : noValidation,
+	delivery : noValidation,
 	comments : noValidation
 }
 
@@ -270,6 +272,7 @@ var updateOrderSummary = function() {
 	document.getElementById('summary-customer-email').textContent = info.email
 	document.getElementById('summary-customer-email').href = 'mailto:' + info.email
 	document.getElementById('summary-customer-payment').textContent = info.payment
+	document.getElementById('summary-customer-delivery').textContent = info.delivery
 }
 
 var catalogShowPage = function(page) {

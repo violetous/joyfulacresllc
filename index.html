@@ -221,7 +221,7 @@
 
                                 <div class="field is-horizontal">
                                   <div class="field-label is-normal">
-                                    <label class="label">Preferred Payment</label>
+                                    <label class="label">Payment</label>
                                   </div>
                                   <div class="field-body">
                                     <div class="field is-expanded">
@@ -238,6 +238,29 @@
                                       </div>
                                       <p class="help">
                                         Payment is due when you recieve your order.  This form is for reserving plants only.  You will not be prompted to enter payment information here.  
+                                      </p>
+
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                  <div class="field-label is-normal">
+                                    <label class="label">Delivery</label>
+                                  </div>
+                                  <div class="field-body">
+                                    <div class="field is-expanded">
+                                      <div class="control is-expanded">
+                                        <div class="select is-fullwidth">
+                                          <select id="field-delivery">
+                                            <option>Joyful Acres booth at Patchwork Market at Fullsteam Brewery (726 Rigsbee Ave, Durham, NC 27701), March 2, 12-4pm.</option>
+                                            <option>Free Friday Local Delivery beginning March 8, 2019</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <p class="help">
+Free Friday Local Delivery beginning March 8, 2019<br />
+Deliveries will be made Fridays starting March 8, 2019 to Durham, Person, Chatham, Wake, Orange, and Granville counties.  <br />
+If you live outside of these counties, please arrange pickup from Joyful Acres in Durham, NC.
                                       </p>
 
                                     </div>
@@ -278,7 +301,7 @@
                                 <h1 class="title is-1">Pre-order Summary</h1>
                                 <table class="table is-fullwidth is-striped is-hoverable">
                                     <thead>
-                                        <th class="is-hidden-touch" style="white-space: nowrap;">Name</th>
+                                        <th style="white-space: nowrap;">Name</th>
                                         <th>Size</th>
                                         <th>Available</th>
                                         <th>Unit Price</th>
@@ -304,18 +327,21 @@
                                 </table>
                                 <div class="content">
                                     <p class="has-text-right">
-                                        <span id="summary-customer-name">Joe Customer</span>
+                                        <span id="summary-customer-name"></span>
                                         <br />
-                                        <a id="summary-customer-email" href="mailto:joe@customer.com">Joe@Customer.com</a>
+                                        <a id="summary-customer-email" href=""></a>
                                         <br />
-                                        <span id="summary-customer-phone">919-423-3401</span>
+                                        <span id="summary-customer-phone"></span>
                                         <br />
-                                        <span id="summary-customer-address">123 Southview Road</span>
+                                        <span id="summary-customer-address"></span>
                                         <br/>
-                                        <span id="summary-customer-citystatezip">Durham, NC 27019</span>
+                                        <span id="summary-customer-citystatezip"></span>
                                         <br /><br />
                                         <span class="has-text-weight-bold">Payment Preference</span><br />
-                                        <span id="summary-customer-payment">Venmo</span>
+                                        <span id="summary-customer-payment"></span>
+                                        <br /><br />
+                                        <span class="has-text-weight-bold">Delivery Preference</span><br />
+                                        <span id="summary-customer-delivery"></span>
                                     </p>
 
                                 </div>
