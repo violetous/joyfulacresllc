@@ -32,6 +32,7 @@ var products = [
       "latinName": "Polystichum acrostichoides", 
       "name": "Christmas Fern", 
       "sizeClass": "largePlantOnly", 
+      "prices" : {"Quart" : 11.00},
       "uses": "Great for playspaces and shady gardens."
    }, 
    {
@@ -67,6 +68,7 @@ var products = [
       "latinName": "Sambucus nigra var. canadensis", 
       "name": "Elderberry", 
       "sizeClass": "largePlantOnly", 
+      "prices" : {"Quart" : 11.00},
       "uses": "Will run around and spread easily in damp soils. Bright and pungent immune boosting medicine."
    }, 
    {
@@ -86,7 +88,8 @@ var products = [
    {
       "growth": "Shade. Perennial.", 
       "latinName": "Hydrastis canadensis", 
-      "name": "Goldenseal", 
+      "name": "Goldenseal",
+      "prices" : {"Quart" : 11.00},
       "sizeClass": "largePlantOnly", 
       "uses": "Woodland medicinal. Low and slow growing, bright yellow rooted beauty."
    }, 
@@ -122,6 +125,7 @@ var products = [
       "growth": "Shade. Evergreen.", 
       "latinName": "Mitchell repent", 
       "name": "Partridgeberry", 
+      "prices" : {"Quart" : 11.00},
       "sizeClass": "largePlantOnly", 
       "uses": "Slow growing, low evergreen native ground cover."
    }, 
