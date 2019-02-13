@@ -39,8 +39,8 @@ const CUSTOMER_FIELD_VALIDATORS = {
 	comments : noValidation
 }
 
-const FORM_POST_URL = 'https://usebasin.com/f/1aa70f183436.json'
-
+//const FORM_POST_URL = 'https://usebasin.com/f/1aa70f183436.json'
+const FORM_POST_URL = 'https://usebasin.com/f/da1e15e3a801.json'
 
 var Product = function(data) {
 	this.catalog = data['catalog'] || {}
@@ -309,7 +309,7 @@ var catalogNextPage = function() {
 			}
 			break
 		case 3:
-			document.getElementById('btn-catalog-submit').classList.add('is-loading')
+			document.getElementById('btn-catalog-submit').classList.add('is-loading')			
 			catalogPOST({
 				customer : catalogGetCustomerInfo(),
 				order : catalog.getShoppingCart()
