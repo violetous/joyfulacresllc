@@ -11,7 +11,8 @@ var products = [
       "latinName": "Rudbekia hurta", 
       "name": "Black Eyed Susan", 
       "sizeClass": "default", 
-      "uses": "Cheerful flowers. Resilient and great for playspaces."
+      "uses": "Cheerful flowers. Resilient and great for playspaces.",
+      "datesAvailable" : {"Start (3.25\")" : "01 Apr 2019", "Quart" : "01 Apr 2019"}
    }, 
    {
       "growth": "Sun to part-shade. Perennial.", 
@@ -25,7 +26,8 @@ var products = [
       "latinName": "Acorus calamus americanus", 
       "name": "Calamus", 
       "sizeClass": "default", 
-      "uses": "Water loving plant. Sweet smell. Great for damp play spaces."
+      "uses": "Water loving plant. Sweet smell. Great for damp play spaces.",
+      "datesAvailable" : {"Start (3.25\")" : "22 Mar 2019", "Quart" : "22 Mar 2019"}
    }, 
    {
       "growth": "Shade. Evergreen.", 
@@ -102,14 +104,16 @@ var products = [
       "latinName": "Cymbopogon flexuous", 
       "name": "Lemon Grass", 
       "sizeClass": "default", 
-      "uses": "Snip the leaves for delicious tea. Use the bulb and leaves in cooking."
-   }, 
+      "uses": "Snip the leaves for delicious tea. Use the bulb and leaves in cooking.",
+      "datesAvailable" : {"Start (3.25\")" : "22 Mar 2019", "Quart" : "22 Mar 2019"}
+   },
    {
       "growth": "Sun to part-shade. Annual.", 
       "latinName": "", 
       "name": "Marigold", 
       "sizeClass": "default", 
-      "uses": "Great for your vegetable garden or playspace. Bright and cheerful and keeps some bugs at bay."
+      "uses": "Great for your vegetable garden or playspace. Bright and cheerful and keeps some bugs at bay.",
+      "datesAvailable" : {"Start (3.25\")" : "22 Mar 2019", "Quart" : "22 Mar 2019"}
    }, 
    {
       "growth": "Full-sun. Biennial.", 
@@ -151,7 +155,8 @@ var products = [
       "latinName": "Acmella oleracea", 
       "name": "Toothache Plant, Spilanthes", 
       "sizeClass": "default", 
-      "uses": "Tincture or nibble for tooth pain. Be careful, it\u2019s potent!"
+      "uses": "Tincture or nibble for tooth pain. Be careful, it's potent!",
+      "datesAvailable" : {"Start (3.25\")" : "01 Apr 2019", "Quart" : "01 Apr 2019"}
    }, 
    {
       "growth": "Full-sun. Annual. (overwinter indoors)", 
