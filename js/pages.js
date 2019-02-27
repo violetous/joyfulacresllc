@@ -46,13 +46,15 @@ function setupPages() {
 			catalogShowPage(1);
 		}
 
-        
- ga('send', {
-          hitType: 'event',
-          eventCategory: 'link',
-          eventAction: target,
-        });
+        try {
+	        ga('send', {
+	          hitType: 'event',
+	          eventCategory: 'link',
+	          eventAction: target,
+	        });	
 
+        } catch(e) {console.error(e);}
+ 		
       });
     });
   }

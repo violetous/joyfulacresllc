@@ -79,6 +79,15 @@ var Product = function(data) {
 		this.setQty(evt.target.value)
 		this._update()
 		this.catalog.emit('change', {target : this.catalog})
+		try {
+	        ga('send', {
+	          hitType: 'event',
+	          eventCategory: 'catalogUpdate',
+	          eventAction: this.name,
+	        });	
+
+        } catch(e) {console.error(e);}
+
 	})
 
 	tb = document.querySelector("#order-summary-table")
