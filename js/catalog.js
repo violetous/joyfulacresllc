@@ -45,6 +45,7 @@ const CUSTOMER_FIELD_VALIDATORS = {
 const FORM_POST_URL = 'https://usebasin.com/f/da1e15e3a801.json'
 
 var Product = function(data) {
+	console.log(data)
 	this.catalog = data['catalog'] || {}
 	this.name = data['name'] || ''
 	this.latinName = data['latinName'] || ''
@@ -54,7 +55,8 @@ var Product = function(data) {
 	this.uses = data['uses']
 	this.qty = data['qty'] || 0
 	this.size = data['size'] || SIZE_CLASSES[this.sizeClass][0]
-
+	this.hidden = data['hidden'] || false
+	this.soldout = data['soldout'] || false
 	this.prices = data['prices'] || DEFAULT_PRICES
 	this.datesAvailable = data['datesAvailable'] || DEFAULT_DATES_AVAILABLE
 
@@ -95,6 +97,7 @@ var Product = function(data) {
 	this.summaryRow = document.importNode(t.content, true)
 
 	this._update()
+	console.info(this)
 }
 
 Product.prototype.getPrice = function() {
@@ -121,6 +124,9 @@ Product.prototype.setSize = function(size) {
 Product.prototype.addToCatalog = function(node) {
 	node.appendChild(this.catalogRow)
 	this.catalogRow = node.lastElementChild
+	if(this.hidden) {
+    	this.catalogRow.style.display = 'none'  		
+	}
 }
 
 Product.prototype.addToSummary = function(node) {
@@ -131,7 +137,17 @@ Product.prototype.addToSummary = function(node) {
 
 Product.prototype._update = function() {
     var td = this.catalogRow.querySelectorAll("td")
-    td[0].textContent = this.name
+    if(this.hidden) {
+    	try {
+	    	this.catalogRow.style.display = 'none'  
+    	} catch(e) {}
+    }
+
+    if(this.soldout) {
+    	td[0].innerHTML = this.name + '<br/><span class="has-text-danger">Temporarily sold out.</span>'    	
+    } else {
+    	td[0].innerHTML = this.name
+    }
     td[1].textContent = this.latinName
     td[2].textContent = this.growth
     td[3].textContent = this.uses
@@ -144,9 +160,15 @@ Product.prototype._update = function() {
 
     var select = this.catalogRow.querySelector('select')
     select.value = this.size
+    if(this.soldout) {
+    	select.disabled = true
+    }
 
     var qty = this.catalogRow.querySelector('input')
-    qty.value = this.qty
+	qty.value = this.qty
+    if(this.soldout) {
+	    qty.disabled = true
+    }
 
     var td = this.summaryRow.querySelectorAll("td")
     td[0].textContent = this.name

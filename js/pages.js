@@ -59,6 +59,16 @@ function setupPages() {
     });
   }
 
+  const $deleteLinks = Array.prototype.slice.call(document.querySelectorAll('.delete'), 0);
+  if ($deleteLinks.length > 0) {
+    $deleteLinks.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        document.getElementById(target).style.display = 'none'; 		
+      });
+    });
+  }
+
 }
 
 function showPage(name) {
