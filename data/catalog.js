@@ -159,7 +159,8 @@ var products = [
       "name": "Elderberry", 
       "sizeClass": "largePlantOnly", 
       "prices" : {"Quart" : 11.00},
-      "uses": "Will run around and spread easily in damp soils. Bright and pungent immune boosting medicine."
+      "uses": "Will run around and spread easily in damp soils. Bright and pungent immune boosting medicine.",
+      "soldout":true
    }, 
    {
       "growth": "Sun to part-shade. Perennial.", 
