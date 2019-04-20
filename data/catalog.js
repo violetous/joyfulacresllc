@@ -254,7 +254,8 @@ var products = [
       "latinName": "Ocimum sanctum", 
       "name": "Tulsi Rama", 
       "sizeClass": "smallPlantOnly", 
-      "uses": "Tea, gentle stimulant."
+      "uses": "Tea, gentle stimulant.",
+      "soldout":true
    }, 
    {
       "growth": "Full-sun. Annual. (overwinter indoors)", 
@@ -268,13 +269,15 @@ var products = [
       "latinName": "Ocimum gratissima", 
       "name": "Tulsi Vana", 
       "sizeClass": "smallPlantOnly", 
-      "uses": "Tea, used for stress, anxiety, heart disease, arthritis, diabetes, and dementia"
+      "uses": "Tea, used for stress, anxiety, heart disease, arthritis, diabetes, and dementia",
+      "soldout":true
    }, 
    {
       "growth": "Sun to shade. Perennial.", 
       "latinName": "Achillea millefolium", 
       "name": "Yarrow", 
       "sizeClass": "default", 
-      "uses": "Beautifully lacy leaves and white flowers. Good first aid plant."
+      "uses": "Beautifully lacy leaves and white flowers. Good first aid plant.",
+      "soldout":true
    }
 ]
