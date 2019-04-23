@@ -45,7 +45,6 @@ const CUSTOMER_FIELD_VALIDATORS = {
 const FORM_POST_URL = 'https://usebasin.com/f/da1e15e3a801.json'
 
 var Product = function(data) {
-	console.log(data)
 	this.catalog = data['catalog'] || {}
 	this.name = data['name'] || ''
 	this.latinName = data['latinName'] || ''
@@ -253,6 +252,8 @@ products.forEach(product => {
 var currentPage = 1
 
 var setupCatalog = function() {
+
+	catalog.products = catalog.products.sort(function(a,b) { return ((a['name'] || '').toLowerCase()).localeCompare((b['name'] || '').toLowerCase())})
 	var tbody = document.getElementById('catalog-table')
 
 	catalog.products.forEach(product => {
