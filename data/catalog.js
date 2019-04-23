@@ -144,7 +144,8 @@ var products = [
       "latinName": "Thymus serpyllum", 
       "name": "Creeping Thyme", 
       "sizeClass": "largePlantOnly", 
-      "uses": "Robust yet short plant. Great for walkways and playspaces."
+      "uses": "Robust yet short plant. Great for walkways and playspaces.",
+      "soldout":true
    }, 
    {
       "growth": "Sun or part-shade. Perennial.", 
@@ -207,7 +208,8 @@ var products = [
       "latinName": "Verbascum thapsus", 
       "name": "Mullein", 
       "sizeClass": "smallPlantOnly", 
-      "uses": "Flowers in the second year. A wonderfully fuzzy herbal ally."
+      "uses": "Flowers in the second year. A wonderfully fuzzy herbal ally.",
+      "soldout":true
    }, 
    {
       "growth": "Shade. Evergreen.", 
@@ -223,7 +225,8 @@ var products = [
       "latinName": "Ocimum basilicum \u2018Purpurascens\u2019", 
       "name": "Purple Basil", 
       "sizeClass": "smallPlantOnly", 
-      "uses": "Spicy annual. A warming addition to pesto and iced tea."
+      "uses": "Spicy annual. A warming addition to pesto and iced tea.",
+      "soldout":true
    }, 
    {
       "growth": "Sun to part-shade. Perennial.", 
@@ -278,6 +281,5 @@ var products = [
       "name": "Yarrow", 
       "sizeClass": "default", 
       "uses": "Beautifully lacy leaves and white flowers. Good first aid plant.",
-      "soldout":true
    }
 ]
