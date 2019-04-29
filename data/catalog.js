@@ -58,8 +58,8 @@ var products = [
       "sizeClass": "smallPlantOnly", 
       "uses": "Seasonal vegetable",
       "available": "01 Apr 2019",
-      "prices" : {"Start (3.25\")" : 2.00}
-
+      "prices" : {"Start (3.25\")" : 2.00},
+      "soldout":true
    }, 
    {
       "growth": "Full-Sun, Annual.", 
